@@ -1,4 +1,4 @@
-## ICLR 2023 submission readme
+## Code for paper "Continuous-time identification of dynamic state-space models by deep subspace encoding"
 
 See `environment.yml` to which packages are required. (see [Managing envirments with conda](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html))
 
@@ -12,6 +12,6 @@ The important notebooks are;
 * `latent-neural-ode-analysis.ipynb` used to analyze the results obtained from `latent-neural-ode-train.ipynb`
 * `EMPS-train-and-analysis.ipynb` used for training and analysis for both neural ODE and CT subnet on the EMPS benchmark 
 
-The considered benchmarks are described and downloeaded from: https://www.nonlinearbenchmark.org/
+The considered benchmarks are described and downloaded from: https://www.nonlinearbenchmark.org/
 
 To run the the analysis you need either the estimate model or re-train using the train notebooks. The estimated model can be downloaded from: [drive](https://drive.google.com/file/d/15VSky-DtZNHJQjRfxCPOjBDs-xTCBBb3/view?usp=sharing) (426 MB)
