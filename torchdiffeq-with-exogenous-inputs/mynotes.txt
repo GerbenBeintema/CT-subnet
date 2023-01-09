@@ -1,0 +1,35 @@
+diff           func = LatentODEfunc(latent_dim, nhidden).to(device) 
+x, h -> out    rec = RecognitionRNN(latent_dim, obs_dim, rnn_nhidden, nspiral).to(device)
+static         dec = Decoder(latent_dim, obs_dim, nhidden).to(device)
+
+#q(z_0)
+
+z0 with rec with discrete backward integration
+
+noise_std?
+full batch
+
+
+samp_trajs[:, t, :] ?
+samp_ts
+
+
+
+    orig_trajs = torch.from_numpy(orig_trajs).float().to(device) #(nspiral, ntotal, 2)
+    samp_trajs = torch.from_numpy(samp_trajs).float().to(device) (noise?) #noisy observations of size (nspiral, nsample, 2)
+    samp_ts = torch.from_numpy(samp_ts).float().to(device)
+
+odeint returns y with first as time
+
+which integrator is it now?
+ - dopri5
+
+class Dopri5Solver(RKAdaptiveStepsizeODESolver):
+    order = 5
+    tableau = _DORMAND_PRINCE_SHAMPINE_TABLEAU
+    mid = DPS_C_MID
+
+I gave func an u parameter
+
+ntotal the time samples
+nsprials is the number of time series
